@@ -1,0 +1,223 @@
+/*回到顶部按钮*/
+#scroll-to-top-button {
+    position: fixed;
+    /* 1rem <--> -5rem */
+    right: -5rem;
+    bottom: 2rem;
+    z-index: 10;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+section#home {
+    /*height: 300px;*/
+}
+
+.overlay {
+    /*background-image: url('image/background.jpg');*/
+    background-color: #393939;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    z-index: -10;
+}
+
+/*主页向下滚动动画图标*/
+div.c-scroll-animation {
+    position: absolute;
+    top: 225px;
+    height: 5rem;
+    width: 100%;
+    text-align: center;
+}
+
+@-webkit-keyframes scroll-led {
+    0% {
+        opacity: 0;
+        margin-top: 0;
+    }
+
+    50% {
+        opacity: 0.65;
+    }
+
+    100% {
+        opacity: 0;
+        margin-top: 1.5rem;
+    }
+}
+
+i.c-scroll-animation {
+    -webkit-animation-name: scroll-led;
+    -webkit-animation-duration: 2.2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: 0.4s;
+    cursor: pointer;
+}
+
+/*主菜单*/
+.borderless.menu {
+    background-color: rgba(27, 27, 27, 0) !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: box-shadow 0.5s ease, padding 0.5s ease, background-color 0.5s ease;
+    z-index: 200 !important;
+}
+
+.borderless.menu.fixed {
+    background-color: #ffffff !important;
+    border: 1px solid #ddd !important;
+    box-shadow: 0 5px 5px rgba(120, 120, 120, 0.2) !important;
+    z-index: 200 !important;
+}
+
+/*主菜单项目*/
+.borderless.menu a, .borderless.menu h3 {
+    color: #ffffff !important;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.borderless.menu a:hover {
+    background: rgba(249, 249, 249, 0.31) !important;
+    color: #ffffff !important;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.borderless.menu.fixed a, .borderless.menu.fixed h3 {
+    color: #000000 !important;
+}
+
+.borderless.menu.fixed a:hover {
+    background: #d1d1d1 !important;
+    color: #000000 !important;
+}
+
+/*主菜单仅显示电脑版项目*/
+.borderless.menu .c-mobile-only {
+    display: none !important;
+}
+
+.borderless.menu .c-desktop-only {
+    display: block !important;
+    /*padding-top: 19px !important;*/
+}
+
+/*正文通用组件*/
+h1.ui.horizontal.divider.header {
+    margin-top: 7rem !important;
+}
+
+.ui.justified.container,
+.ui.center.aligned.container {
+    margin-top: 3rem !important;
+}
+
+h2.ui.header {
+    margin-top: 4rem !important;
+}
+
+.ui.styled.accordion {
+    margin-top: 1rem;
+}
+
+.ui.stackable.grid.container .ui.statistic {
+    margin-top: 1rem;
+}
+
+.ui.statistic .label {
+    margin-top: 1rem !important;
+}
+
+/*文末留空*/
+.c-vertical-padding {
+    height: 10rem;
+}
+
+/*页脚*/
+.c-footer {
+    padding: 3rem 2rem 1rem;
+}
+
+.c-footer-logo {
+    width: 200px;
+}
+
+.c-footer-qrcode {
+    width: 150px;
+}
+
+#mobile-menu-header {
+    padding-top: 20px;
+}
+
+/*手机版*/
+@media only screen and (max-width: 768px) {
+    /*修复居中标题*/
+    #mobile-menu-header-center-aligned {
+        padding-right: 10ch;
+    }
+
+    /*主页向下滚动动画图标*/
+    @-webkit-keyframes scroll-led {
+        0% {
+            opacity: 0;
+            margin-top: 0;
+        }
+
+        50% {
+            opacity: 0.8;
+        }
+
+        100% {
+            opacity: 0;
+            margin-top: 2.5rem;
+        }
+    }
+
+    div.c-scroll-animation {
+        height: 8rem;
+    }
+
+    /*主菜单仅显示手机版项目*/
+    .borderless.menu .c-desktop-only {
+        display: none !important;
+    }
+
+    .borderless.menu .c-mobile-only {
+        display: block !important;
+        padding-top: 19px !important;
+    }
+
+    /*文末留空*/
+    .c-vertical-padding {
+        margin-top: 6rem;
+        height: 0;
+    }
+
+    /*页脚*/
+    .c-footer {
+        padding: 2rem 2rem 1rem;
+        text-align: center;
+    }
+
+    .c-footer-logo {
+        width: 180px;
+    }
+
+    .c-footer-qrcode {
+        width: 200px;
+    }
+}
+
+/*超宽屏幕版*/
+@media only screen and (min-width: 1440px) {
+    /*主页logo*/
+    .c-main-logo {
+        width: 45% !important;
+    }
+}
