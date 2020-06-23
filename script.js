@@ -2,26 +2,9 @@ let parts = ["home", "overall", "committee", "breakdown", "sponsor", "faq", "reg
 let displayScrollTop = false;
 let sectionPosition = 0;
 
-// 计算主页元素垂直间距
-function updateVerticalPadding() {
-    let spareHeight = document.body.clientHeight
-        - $("section .c-main-logo").height()
-        - $("section .c-main-description").height()
-        - $("section .borderless.menu").height();
-    $(".c-logo-padding").height(spareHeight * 0.33);
-    $(".c-description-padding").height(spareHeight * 0.14);
-    $(".c-main-menu-padding").height(spareHeight * 0.07);
-}
-
 // 计算所在区块
 function calcPartPosition() {
-    // 默认宽屏，不检测注册部分
-    let m = 6;
-    if (document.body.clientWidth <= 768) {
-        // 手机需要检测注册部分
-        m = 7;
-    }
-    for (let i = 1; i < m; i++) {
+    for (let i = 1; i < parts.length; i++) {
         if ($(`#${parts[i]}`).visible(true)) {
             return i;
         }
@@ -31,37 +14,17 @@ function calcPartPosition() {
 
 // 高亮所在区块
 function updatePartPosition(p) {
-    $(".borderless.menu .c-desktop-only.item").removeClass("active");
-    $(".vertical.sidebar > .item:not(.header)").removeClass("active");
+    $("#main-menu .item").removeClass("active");
+    $("#sidebar-menu > .item").removeClass("active");
     if (p !== 0) {
-        $(`.n-${parts[p]}:not(.icon):not(.button)`).addClass("active");
+        $(`.n-${parts[p]}.item`).addClass("active");
     }
 }
 
-$(document).ready(function () {
-    // 主菜单吸附
-    $(".borderless.menu").visibility({
-        type: "fixed"
-    });
-    // 侧边菜单展开
-    $(".ui.sidebar").sidebar("attach events", ".c-sidebar-toggle");
-    // 初始化可折叠文本框
-    $('.ui.accordion').accordion();
-    // 导航项目滚动动画
-    for (let i = 0; i < parts.length; i++) {
-        $(`.n-${parts[i]}`).click(function () {
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $(`#${parts[i]}`).offset().top - 80
-            }, 'normal');
-            $(".pusher").click();
-        });
-    }
-    // 计算主页元素垂直间距
-    updateVerticalPadding();
-});
-
 // 监听窗口滚动
 $(window).scroll(function () {
+
+    return;
     if (document.documentElement.scrollTop + document.body.scrollTop > document.body.clientHeight) {
         // 显示顶部按钮
         if (!displayScrollTop) {
@@ -82,4 +45,33 @@ $(window).scroll(function () {
         updatePartPosition(t);
         sectionPosition = t;
     }
+});
+
+$(document).ready(function () {
+    // 主菜单吸附
+    $('.masthead').visibility({
+            once: false,
+            onBottomPassed: function () {
+                $('.fixed.menu').transition('fade in');
+            },
+            onBottomPassedReverse: function () {
+                $('.fixed.menu').transition('fade out');
+            }
+        });
+
+    // 侧边菜单展开
+    $(".ui.sidebar").sidebar("attach events", ".sidebar-toggle");
+
+    // 导航项目滚动动画
+    for (let i = 0; i < parts.length; i++) {
+        $(`.n-${parts[i]}`).click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(`#${parts[i]}`).offset().top - 80
+            }, 'normal');
+            $(".pusher").click();
+        });
+    }
+
+    // 防止图片拖动
+    $('img').on('dragstart', () => false);
 });

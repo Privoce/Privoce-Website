@@ -15,14 +15,15 @@
 <body>
 
 <!--回到顶部按钮-->
-<div class="ui large orange circular icon button n-home" id="scroll-to-top-button">
+<div class="ui large primary circular icon button n-home" id="scroll-to-top-button">
     <i class="angle up icon"></i>
 </div>
 
 <!--手机版侧边菜单-->
-<div class="ui vertical inverted sidebar menu">
-    <a class="header item n-home">
-        <h1 class="ui inverted header" id="mobile-menu-header">The Privoce Project</h1>
+<div class="ui vertical inverted sidebar menu" id="sidebar-menu">
+
+    <a class="header item n-home" id="side-menu-mobile-header">
+        <h3 class="ui inverted header">The<br>Privoce<br>Project</h3>
     </a>
     <a class="item">Mission</a>
     <a class="item">Overview</a>
@@ -30,658 +31,115 @@
     <a class="item">Features</a>
     <a class="item">Team</a>
     <a class="item">Join Us</a>
+
 </div>
+
+<!--固定的主菜单-->
+<div class="ui large borderless top fixed menu transition hidden main menu">
+    <div class="ui text container">
+        <a class="header item desktop-only n-home">
+            <h3 class="ui header">
+                <i class="user secret icon"></i>
+                <div class="content">Privoce</div>
+            </h3>
+        </a>
+        <a class="item mobile-only sidebar-toggle">
+            <i class="sidebar icon"></i>
+        </a>
+        <div class="header item mobile-only center aligned">
+            <h3 class="ui header">The Privoce Project</h3>
+        </div>
+        <a class="item desktop-only">Mission</a>
+        <a class="item desktop-only">Overview</a>
+        <a class="item desktop-only">Approach</a>
+        <a class="item desktop-only">Features</a>
+        <a class="item desktop-only">Team</a>
+        <a class="item desktop-only">Join Us</a>
+    </div>
+</div>
+
 <!--内容容器-->
 <div class="pusher">
-    <!--主页-->
-    <div id="home">
-        <div class="overlay"></div>
-        <!--主菜单-->
-        <div class="ui borderless huge menu">
-            <div class="ui text container">
-                <a class="header item c-desktop-only n-home">
-                    <h3 class="ui inverted header">The Privoce Project</h3>
-                </a>
-                <a class="item c-mobile-only c-sidebar-toggle">
-                    <i class="sidebar icon"></i>
-                    MENU
-                </a>
-                <div class="header item c-mobile-only center aligned" id="mobile-menu-header-center-aligned">
-                    <h3 class="ui inverted header">The Privoce Project</h3>
-                </div>
-                <a class="item c-desktop-only">Mission</a>
-                <a class="item c-desktop-only">Overview</a>
-                <a class="item c-desktop-only">Approach</a>
-                <a class="item c-desktop-only">Features</a>
-                <a class="item c-desktop-only">Team</a>
-                <a class="item c-desktop-only">Join Us</a>
-            </div>
-        </div>
-        <!--向下滚动动画图标-->
-        <div class="c-scroll-animation">
-            <i class="inverted big angle double down icon c-scroll-animation n-overall"></i>
-        </div>
+    <!--向下滚动动画图标-->
+    <div class="scrolling-hint">
+        <i class="inverted big angle double down icon scrolling-hint n-overall"></i>
     </div>
-    <!--项目简介-->
-    <div class="ui text container" id="overall">
-        <h1 class="ui horizontal divider header">
-            项目简介
-        </h1>
-        <h2 class="ui header">HackShanghai是什么</h2>
-        <div class="ui justified container">
-            这是一场科技创新的的盛事，也是一段耐力与智力的较量。HackShanghai是立足于上海的Hackthon黑客马拉松项目，成立至今已有5年历史。Hackthon的核心，在于面对给定的问题，程序员、工程师、设计师和项目经理进行深入合作，在限定的24-48小时内，有针对性地创造可行的解决方案。HackShanghai致力于成为上海地区乃至全国最具竞争力的黑客马拉松大赛，为行业输送高质量解决方案和优秀人才。
+
+    <div class="ui inverted vertical masthead center aligned segment">
+
+        <div class="ui container">
+
+            <!--主菜单-->
+            <div class="ui large secondary inverted pointing menu main menu">
+                <div class="ui text container">
+                    <a class="header item desktop-only n-home">
+                        <h3 class="ui inverted header">
+                            <i class="user secret icon"></i>
+                            <div class="content">Privoce</div>
+                        </h3>
+                    </a>
+                    <a class="item mobile-only sidebar-toggle">
+                        <i class="sidebar icon"></i>
+                    </a>
+                    <div class="header item mobile-only center aligned">
+                        <h3 class="ui inverted header">The Privoce Project</h3>
+                    </div>
+                    <a class="item desktop-only">Mission</a>
+                    <a class="item desktop-only">Overview</a>
+                    <a class="item desktop-only">Approach</a>
+                    <a class="item desktop-only">Features</a>
+                    <a class="item desktop-only">Team</a>
+                    <a class="item desktop-only">Join Us</a>
+                </div>
+            </div>
+
         </div>
-        <h2 class="ui header">HackShanghai历史</h2>
-        <div class="ui justified container">
-            <div class="ui two column center aligned stackable grid container">
-                <div class="column">
-                    <div class="ui red statistic">
-                        <div class="value">
-                            <i class="calendar icon"></i>
-                            3年
-                        </div>
-                        <div class="label">
-                            举办经验
-                        </div>
-                    </div>
+        <div class="ui text container">
+
+            <!--横幅巨幕-->
+            <div class="ui text container" id="banner">
+
+                <img class="ui image" src="images/cookieManagerIcon.png" alt="">
+
+                <h1 class="ui inverted header">
+                    Cookie Manager
+                </h1>
+
+                <h2>Your smart digital footprints manager!</h2>
+
+                <div class="ui huge primary button">
+                    Get for Chrome
+                    <i class="right arrow icon"></i>
                 </div>
-                <div class="column">
-                    <div class="ui yellow statistic">
-                        <div class="value">
-                            <i class="signup icon"></i>
-                            4500
-                        </div>
-                        <div class="label">
-                            申请者
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui green statistic">
-                        <div class="value">
-                            <i class="users icon"></i>
-                            750
-                        </div>
-                        <div class="label">
-                            参赛者
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui blue statistic">
-                        <div class="value">
-                            <i class="university icon"></i>
-                            N+
-                        </div>
-                        <div class="label">
-                            合作大学
-                        </div>
-                    </div>
-                </div>
+
             </div>
+
         </div>
-        <h2 class="ui header">活动特点</h2>
-        <div class="ui justified container">
-            HackShanghai的主创团队参赛经验丰富，对赛制理解老道深入。因此，团队对于传统College
-            Hackathon形式中存在的诸多弊端有着更深刻的体验与理解，从而更渴望能在这场赛事中锐意革新，寻求突破之法。
-            <div class="ui styled accordion">
-                <div class="title">
-                    <i class="dropdown icon"></i>
-                    开发周期延长到24小时之外，确保选手有机会完成项目
-                </div>
-                <div class="content">
-                    <p>
-                        传统Hackathon的一大缺陷便是，选手可用于集中攻克项目的时间往往只有24小时，这也使得相当一部分选手呈交的最终结果存在完成度不高、工程草率、思考不深入等问题。HackShanghai对此所给出的对策是，延长选手的开发周期，将赛题在日程前两周公示，并给予充足的供选手深入思考与线上磋商的机会。并且，在活动结束之后，会为选手提供后续开发时间和机会。
-                    </p>
-                </div>
-            </div>
-            <div class="ui styled accordion">
-                <div class="title">
-                    <i class="dropdown icon"></i>
-                    不只有编程, 融入交互媒体艺术元素
-                </div>
-                <div class="content">
-                    <p>
-                        IMA，即交互媒体艺术，作为本次赛事的承办方——上海纽约大学的拳头专业，在赛事创新过程中自然而然地被主创团队纳入了考量范畴。具体而言，选手间的交锋将不仅限于埋头苦干于于电脑屏幕与滚动的代码，
-                        软件与编程和硬件与设备间友好高效的交互也颇能见真章。 </p>
-                </div>
-            </div>
-            <div class="ui styled accordion">
-                <div class="title">
-                    <i class="dropdown icon"></i>
-                    鼓励创新
-                </div>
-                <div class="content">
-                    <p>
-                        为了使突围这一理念的展示并不局限在赛题与赛制的构思上，而是能够在比赛过程与结果中亦能体现鼓励创新的风，HackShanghai采取了放宽内涵的”大赛题“给题形式，促进选手们的思路发散性拓展，保证其能以更广阔的视角去看待“大赛题”，并引入更长久高效的解法；与此同时，奖项评选中将会平衡创新性、可行性与完成度的权重，并设计突围奖，鼓励选手始终以创新的眼光看待事物。
-                    </p>
-                </div>
-            </div>
-        </div>
+
     </div>
-    <!--团队介绍-->
-    <div class="ui text container" id="committee">
-        <h1 class="ui horizontal divider header">
-            团队介绍
-        </h1>
-        <div class="ui justified container">
-            <div class="ui center aligned stackable grid container c-avatars">
-                <div class="column">
-                    <div class="ui list">
-                        <div class="item c-avatar">
-                            <img class="ui circular image" ondragstart="return false;" src="image/avatar/wd.jpg">
-                        </div>
-                        <div class="item c-name">王丁</div>
-                        <div class="item c-position">总负责人</div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui list">
-                        <div class="item c-avatar">
-                            <img class="ui circular image" ondragstart="return false;" src="image/avatar/wyc.jpg">
-                        </div>
-                        <div class="item c-name">王雨宸</div>
-                        <div class="item c-position">活动部负责人</div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui list">
-                        <div class="item c-avatar">
-                            <img class="ui circular image" ondragstart="return false;" src="image/avatar/zyr.jpg">
-                        </div>
-                        <div class="item c-name">朱彦儒</div>
-                        <div class="item c-position">活动部负责人</div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui list">
-                        <div class="item c-avatar">
-                            <img class="ui circular image" ondragstart="return false;" src="image/avatar/lyx.jpg">
-                        </div>
-                        <div class="item c-name">李宇宣</div>
-                        <div class="item c-position">市场部负责人</div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui list">
-                        <div class="item c-avatar">
-                            <img class="ui circular image" ondragstart="return false;" src="image/avatar/hyc.jpg">
-                        </div>
-                        <div class="item c-name">何彦诚</div>
-                        <div class="item c-position">物流及资源保障</div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui list">
-                        <div class="item c-avatar">
-                            <img class="ui circular image" ondragstart="return false;" src="image/avatar/dhy.jpg">
-                        </div>
-                        <div class="item c-name">丁浩玙</div>
-                        <div class="item c-position">内容设计</div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui list">
-                        <div class="item c-avatar">
-                            <img class="ui circular image" ondragstart="return false;" src="image/avatar/sy.jpg">
-                        </div>
-                        <div class="item c-name">桑瑜</div>
-                        <div class="item c-position">UI设计师</div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui list">
-                        <div class="item c-avatar">
-                            <img class="ui circular image" ondragstart="return false;" src="image/avatar/zly.jpg">
-                        </div>
-                        <div class="item c-name">竺力扬</div>
-                        <div class="item c-position">全栈工程师</div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui list">
-                        <div class="item c-avatar">
-                            <img class="ui circular image" ondragstart="return false;" src="image/avatar/hyy.jpg">
-                        </div>
-                        <div class="item c-name">黄语盈</div>
-                        <div class="item c-position">网页开发</div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui list">
-                        <div class="item c-avatar">
-                            <img class="ui circular image" ondragstart="return false;" src="image/avatar/lhm.jpg">
-                        </div>
-                        <div class="item c-name">刘浩铭</div>
-                        <div class="item c-position">服务器运维</div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui list">
-                        <div class="item c-avatar">
-                            <img class="ui circular image" ondragstart="return false;" src="image/avatar/mn.jpg">
-                        </div>
-                        <div class="item c-name">Momoe Nomoto</div>
-                        <div class="item c-position">对外联系</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--活动细则-->
-    <div class="ui text container" id="breakdown">
-        <h1 class="ui horizontal divider header">活动细则</h1>
-        <h2 class="ui header">赛题</h2>
-        <div class="ui justified container">
-            本次比赛主题设置为：回归<br>
-            以下为参赛团队在过去比赛中所涉及的部分开发方向，仅供参赛团队参考。<br>
-            <ul>
-                <li>可持续发展</li>
-                <ul>
-                    <li>动物保护：区域内动物跟踪、统计、分析...</li>
-                    <li>智能家居：整体化的可持续智能家居解决方案</li>
-                    <li>智能城市：城市建设规划、资源合理分配及利用</li>
-                    <li>去沙漠化：物理监测设备、大数据分析</li>
-                </ul>
-                <li>商业经营</li>
-                <ul>
-                    <li>利用人工智能、云计算以及大数据等技术，帮助企业进行数字化营销，销售或企业管理等。</li>
-                </ul>
-                <li>交互艺术</li>
-                <ul>
-                    <li>人机交互装置等。</li>
-                </ul>
-                <li>……</li>
-            </ul>
-        </div>
-        <h2 class="ui header">赛制</h2>
-        <div class="ui justified container">
-            参赛选手将以小组为单位进行比赛，每组人数4-6人。选手可根据给定的赛题提交以编程为核心的综合解决方案。比赛结束后，每支队伍对自己的解决方案进行演讲展示。评审团结合演讲环节和技术指标对各方案进行综合评，向优胜团队颁发奖项。
-        </div>
-        <h2 class="ui header">奖项设置</h2>
-        <div class="ui justified container">
-            <table class="ui celled striped fixed inverted brown table">
-                <tbody>
-                <tr>
-                    <td>HackShanghai 2020 冠军队伍</td>
-                    <td>1支</td>
-                </tr>
-                <tr>
-                    <td>HackShanghai 2020 亚军队伍</td>
-                    <td>3支</td>
-                </tr>
-                <tr>
-                    <td>HackShanghai 2020 季军队伍</td>
-                    <td>3支</td>
-                </tr>
-                <tr>
-                    <td>最佳创意奖</td>
-                    <td>3支</td>
-                </tr>
-                <tr>
-                    <td>最佳展示奖</td>
-                    <td>1支</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <h2 class="ui header">活动时间安排</h2>
-        <div class="ui justified container">
-            <table class="ui celled striped fixed inverted blue table">
-                <tr>
-                    <td>宣传开始时间</td>
-                    <td>2019年12月25日</td>
-                </tr>
-                <tr>
-                    <td>报名通道开启</td>
-                    <td>2020年1月1日</td>
-                </tr>
-                <tr>
-                    <td>报名通道截止</td>
-                    <td>2020年2月29日</td>
-                </tr>
-                <tr>
-                    <td>邀请函发送</td>
-                    <td>2020年3月3日</td>
-                </tr>
-                <tr>
-                    <td>赛题公布、线上组队开始</td>
-                    <td>2020年3月5日</td>
-                </tr>
-                <tr>
-                    <td>比赛时间</td>
-                    <td>2020年4月4-5日</td>
-                </tr>
-            </table>
-        </div>
-        <h2 class="ui header">比赛日流程</h2>
-        <div class="ui justified container">
-            <div class="ui two column stackable grid container">
-                <div class="column">
-                    <table class="ui celled striped fixed inverted table">
-                        <thead>
-                        <tr>
-                            <th colspan="2">
-                                四月四号
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>签到注册</td>
-                            <td>7:00-9:00</td>
-                        </tr>
-                        <tr>
-                            <td>开幕式</td>
-                            <td>9:00-10:00</td>
-                        </tr>
-                        <tr>
-                            <td>黑客马拉松开始</td>
-                            <td>10:00</td>
-                        </tr>
-                        <tr>
-                            <td>午餐供应</td>
-                            <td>11:00</td>
-                        </tr>
-                        <tr>
-                            <td>工作坊</td>
-                            <td>11:00-18:00</td>
-                        </tr>
-                        <tr>
-                            <td>晚餐供应</td>
-                            <td>18:00</td>
-                        </tr>
-                        <tr>
-                            <td>比赛场地转移</td>
-                            <td>21:00</td>
-                        </tr>
-                        <tr>
-                            <td>夜间零食</td>
-                            <td>24:00</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="column">
-                    <table class="ui celled striped fixed inverted table">
-                        <thead>
-                        <tr>
-                            <th colspan="2">
-                                四月五日
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>黑客马拉松结束<br>提交通道关闭</td>
-                            <td>10:00</td>
-                        </tr>
-                        <tr>
-                            <td>第一轮评选</td>
-                            <td>10:00-11:30</td>
-                        </tr>
-                        <tr>
-                            <td>冷餐会</td>
-                            <td>11:30-13:00</td>
-                        </tr>
-                        <tr>
-                            <td>第二轮评选</td>
-                            <td>13:00-15:00</td>
-                        </tr>
-                        <tr>
-                            <td>招聘会</td>
-                            <td>15:00-16:00</td>
-                        </tr>
-                        <tr>
-                            <td>颁奖典礼/闭幕式</td>
-                            <td>16:00-17:00</td>
-                        </tr>
-                        <tr>
-                            <td>闭幕派对</td>
-                            <td>17:00-19:00</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--赞助商-->
-    <div class="ui text container" id="sponsor">
-        <h1 class="ui horizontal divider header">赞助商</h1>
-        <div class="ui center aligned container">
-            <h2 class="ui header">主办方</h2>
-            <div class="ui segment">
-                <img class="c-sponsor-logo" ondragstart="return false;" src="image/sponsor/nyush.jpg">
-            </div>
-            <h2 class="ui header">创业企业</h2>
-            <div class="ui segment">
-                <img class="c-sponsor-logo" ondragstart="return false;" src="image/sponsor/sponsor-placeholder.png">
-            </div>
-            <h2 class="ui header">铜级赞助商</h2>
-            <div class="ui segment">
-                <img class="c-sponsor-logo" ondragstart="return false;" src="image/sponsor/sponsor-placeholder.png">
-            </div>
-            <h2 class="ui header">银级赞助商</h2>
-            <div class="ui segment">
-                <img class="c-sponsor-logo" ondragstart="return false;" src="image/sponsor/sponsor-placeholder.png">
-            </div>
-            <h2 class="ui header">金级赞助商</h2>
-            <div class="ui segment">
-                <img class="c-sponsor-logo" ondragstart="return false;" src="image/sponsor/sponsor-placeholder.png">
-            </div>
-            <h2 class="ui header">冠名赞助</h2>
-            <div class="ui segment">
-                <img class="c-sponsor-logo" ondragstart="return false;" src="image/sponsor/sponsor-placeholder.png">
-            </div>
-        </div>
-    </div>
-    <!--常见问题-->
-    <div class="ui text container" id="faq">
-        <h1 class="ui horizontal divider header">常见问题</h1>
-        <div class="ui justified container">
-            <div class="ui two column stackable grid container">
-                <div class="column">
-                    <div class="ui styled accordion">
-                        <div class="title">
-                            <i class="dropdown icon"></i>
-                            常见问题1
-                        </div>
-                        <div class="content">
-                            <p>
-                                回答1
-                            </p>
-                        </div>
-                    </div>
-                    <div class="ui styled accordion">
-                        <div class="title">
-                            <i class="dropdown icon"></i>
-                            常见问题2
-                        </div>
-                        <div class="content">
-                            <p>
-                                回答2
-                            </p>
-                        </div>
-                    </div>
-                    <div class="ui styled accordion">
-                        <div class="title">
-                            <i class="dropdown icon"></i>
-                            常见问题3
-                        </div>
-                        <div class="content">
-                            <p>
-                                回答3
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui styled accordion">
-                        <div class="title">
-                            <i class="dropdown icon"></i>
-                            常见问题4
-                        </div>
-                        <div class="content">
-                            <p>
-                                回答4
-                            </p>
-                        </div>
-                    </div>
-                    <div class="ui styled accordion">
-                        <div class="title">
-                            <i class="dropdown icon"></i>
-                            常见问题5
-                        </div>
-                        <div class="content">
-                            <p>
-                                回答5
-                            </p>
-                        </div>
-                    </div>
-                    <div class="ui styled accordion">
-                        <div class="title">
-                            <i class="dropdown icon"></i>
-                            常见问题6
-                        </div>
-                        <div class="content">
-                            <p>
-                                回答6
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--注册表单-->
-    <div class="ui text container" id="register">
-        <h1 class="ui horizontal divider header">注册</h1>
-        <div class="ui justified container">
-            <i class="green lock icon"></i>
-            您的数据将被严格保密，仅供本次活动使用
-            <div class="ui segment">
-                <form class="ui form" action="register.php" enctype="multipart/form-data" method="post" autocomplete="off">
-                    <div class="two fields">
-                        <div class="required field">
-                            <label>姓名</label>
-                            <input name="name" type="text">
-                        </div>
-                        <div class="required field">
-                            <label>生日</label>
-                            <div class="ui calendar">
-                                <div class="ui input left icon">
-                                    <i class="calendar icon"></i>
-                                    <input name="birthday" placeholder="请选择一个日期" type="text">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="required field">
-                        <label>地址</label>
-                        <div class="fields">
-                            <div class="four wide field">
-                                <input name="country" placeholder="国家" type="text">
-                            </div>
-                            <div class="four wide field">
-                                <input name="province" placeholder="省名" type="text">
-                            </div>
-                            <div class="four wide field">
-                                <input name="city" placeholder="市名" type="text">
-                            </div>
-                            <div class="four wide field">
-                                <input name="district" placeholder="区名" type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="required field">
-                        <label>教育经历</label>
-                        <div class="fields">
-                            <div class="eight wide field">
-                                <input name="school" placeholder="学校" type="text">
-                            </div>
-                            <div class="four wide field">
-                                <input name="major" placeholder="专业" type="text">
-                            </div>
-                            <div class="four wide field">
-                                <input name="grade" placeholder="年级" type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="two fields">
-                        <div class="required field">
-                            <label>身份证/护照号码</label>
-                            <input name="id" type="text">
-                        </div>
-                        <div class="required field">
-                            <label>手机号</label>
-                            <input name="phone" type="text">
-                        </div>
-                    </div>
-                    <div class="two fields">
-                        <div class="required field">
-                            <label>QQ/微信</label>
-                            <input name="im" type="text">
-                        </div>
-                        <div class="field">
-                            <label>GitHub用户名（可选）</label>
-                            <input name="github" type="text">
-                        </div>
-                    </div>
-                    <div class="required field">
-                        <label>技术特长</label>
-                        <input name="talent" type="text">
-                    </div>
-                    <div class="field">
-                        <label>开发经验（可选）</label>
-                        <textarea name="experience" placeholder="字数要求100字以内" rows="3"></textarea>
-                    </div>
-                    <div class="grouped fields">
-                        <label>是否已经组队</label>
-                        <div class="field">
-                            <div class="ui radio checkbox checked">
-                                <input checked="checked" name="hasteam" type="radio" value="0">
-                                <label>否，我愿意参与网上组队</label>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="ui radio checkbox">
-                                <input name="hasteam" type="radio" value="1">
-                                <label>是，我已有2-4人的队伍</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label>队长姓名（若已经组队则必填此项）</label>
-                        <input name="leadername" type="text">
-                    </div>
-                    <div class="required field">
-                        <label>简历上传</label>
-                        <div class="ui action input">
-                            <input placeholder="支持PDF和Word文档，最大8MB" readonly type="text">
-                            <input accept=".pdf, .doc, .docx" name="cv" style="display: none!important;" type="file"/>
-                            <div class="ui icon button">
-                                <i class="paperclip icon"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="ui green button" type="submit">提交</button>
-                </form>
-            </div>
-        </div>
-    </div>
+
+
+
+
+
     <!--先留点空间-->
     <div class="c-vertical-padding"></div>
+
+    <div style="height: 3000px;">
+
     <!--页脚-->
     <div class="ui inverted vertical segment">
         <div class="ui container c-footer">
             <div class="ui equal height stackable grid">
+
                 <div class="middle aligned row">
+
                     <div class="four wide column">
                         <div class="ui image c-footer-logo">
                             <img ondragstart="return false;" src="image/logo.png">
                         </div>
                     </div>
+
                     <div class="eight wide column">
                         <h4 class="ui inverted header">联系我们</h4>
                         <div class="ui inverted link list">
@@ -695,13 +153,16 @@
                             </a>
                         </div>
                     </div>
+
                     <div class="four wide column">
                         <h4 class="ui inverted header">扫一扫，关注微信公众号</h4>
                         <div class="ui image">
                             <img class="c-footer-qrcode" ondragstart="return false;" src="image/wechat.jpg">
                         </div>
                     </div>
+
                 </div>
+
                 <div class="center aligned middle aligned row">
                     <div class="column">
                         Copyright
@@ -709,9 +170,11 @@
                         2020 Liyang Zhu. All rights reserved.
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
+
 </div>
 </body>
 </html>
