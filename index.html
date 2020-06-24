@@ -25,12 +25,12 @@
     <a class="header item n-home" id="side-menu-mobile-header">
         <h3 class="ui inverted header">The<br>Privoce<br>Project</h3>
     </a>
-    <a class="item">Mission</a>
-    <a class="item">Overview</a>
-    <a class="item">Approach</a>
-    <a class="item">Features</a>
-    <a class="item">Team</a>
-    <a class="item">Join Us</a>
+    <a class="item n-mission">Mission Statement</a>
+    <a class="item n-overview">Project Overview</a>
+    <a class="item n-approach">Our Approach</a>
+    <a class="item n-feature">Key Product Features</a>
+    <a class="item n-team">Our Team</a>
+    <a class="item n-join">Join Us</a>
 
 </div>
 
@@ -46,15 +46,15 @@
         <a class="item mobile-only sidebar-toggle">
             <i class="sidebar icon"></i>
         </a>
-        <div class="header item mobile-only center aligned">
+        <div class="header item mobile-only center aligned n-home">
             <h3 class="ui header">The Privoce Project</h3>
         </div>
-        <a class="item desktop-only">Mission</a>
-        <a class="item desktop-only">Overview</a>
-        <a class="item desktop-only">Approach</a>
-        <a class="item desktop-only">Features</a>
-        <a class="item desktop-only">Team</a>
-        <a class="item desktop-only">Join Us</a>
+        <a class="item desktop-only n-mission">Mission</a>
+        <a class="item desktop-only n-overview">Overview</a>
+        <a class="item desktop-only n-approach">Approach</a>
+        <a class="item desktop-only n-feature">Features</a>
+        <a class="item desktop-only n-team">Team</a>
+        <a class="item desktop-only n-join">Join Us</a>
     </div>
 </div>
 
@@ -62,11 +62,11 @@
 <div class="pusher">
     <!--向下滚动动画图标-->
     <div class="scrolling-hint">
-        <i class="inverted big angle double down icon scrolling-hint n-overall"></i>
+        <i class="inverted big angle double down icon scrolling-hint n-mission"></i>
     </div>
 
-    <div class="ui inverted vertical masthead center aligned segment">
-
+    <!--主菜单和横幅巨幕-->
+    <div class="ui inverted vertical masthead center aligned segment" id="home">
         <div class="ui container">
 
             <!--主菜单-->
@@ -81,15 +81,15 @@
                     <a class="item mobile-only sidebar-toggle">
                         <i class="sidebar icon"></i>
                     </a>
-                    <div class="header item mobile-only center aligned">
+                    <div class="header item mobile-only center aligned n-home">
                         <h3 class="ui inverted header">The Privoce Project</h3>
                     </div>
-                    <a class="item desktop-only">Mission</a>
-                    <a class="item desktop-only">Overview</a>
-                    <a class="item desktop-only">Approach</a>
-                    <a class="item desktop-only">Features</a>
-                    <a class="item desktop-only">Team</a>
-                    <a class="item desktop-only">Join Us</a>
+                    <a class="item desktop-only n-mission">Mission</a>
+                    <a class="item desktop-only n-overview">Overview</a>
+                    <a class="item desktop-only n-approach">Approach</a>
+                    <a class="item desktop-only n-feature">Features</a>
+                    <a class="item desktop-only n-team">Team</a>
+                    <a class="item desktop-only n-join">Join Us</a>
                 </div>
             </div>
 
@@ -118,56 +118,254 @@
 
     </div>
 
+    <!--Mission-->
+    <div class="ui text container" id="mission">
+
+        <h1 class="ui horizontal divider header">
+            Mission Statement
+        </h1>
+
+        <h2 class="ui medium header">Build tools to enhance data ownership and privacy!</h2>
+
+        <div class="ui text">
+            <p>If Web 1.0 granted netizens the right to view online content, and Web 2.0 has given netizens the right to publish in a participatory manner, Web 3.0 will go one step further and endow netizens personal storage and personal computation.</p>
+            <p>A decade ago, the rise of smartphone and mobile internet had revolutionized the Internet and ushered in the app era--where Internet companies conduct business through apps, which provide features in the front end to meet user need and data storage in the back end. A big portion of Internet companies’ revenue is from advertising, and that explains why user data is so important for them. However, data collected by different apps are stored in silos with little interoperability--different apps don’t talk to each other due to the competing relationship between Internet companies, which has led to unfavorable results for both the Internet companies and the users--Internet companies sign treaties to trade user data, and user might have dozens of accounts online while can’t find a way to manage their online data footprints.</p>
+            <p>How can we grant every netizen better ownership of personal data? How can netizens gain more representation through better means of participation in today’s data economy? With the rise of cloud computing, the personal cloud model and related content distribution methods have the potential to revolutionize the Internet and live up to the Web 3.0 ideals--the division of labour in data storage, computing, and Internet services. Join me as the pioneers to build out the future of the Internet!</p>
+        </div>
+    </div>
+
+    <!--Overview-->
+    <div class="ui text container" id="overview">
+
+        <h1 class="ui horizontal divider header">
+            Project Overview
+        </h1>
+
+        <div class="ui text">
+            <p>The Privoce project originated from the SoLiD (Social Linked Data) concept, which proposes that every user would have a personal data pot and has the right to assign read/write access to third-party services (apps). The core innovation is a middle ground between users and platforms, or a data bank, which serves as a means for users to store and manage their data.</p>
+        </div>
+    </div>
+
+    <!--Approach-->
+    <div class="ui text container" id="approach">
+
+        <h1 class="ui horizontal divider header">
+            Our Approach
+        </h1>
+
+        <div class="ui text">
+            <p>There are many aspects to approach the data ownership problem: Miniprogram adopts a top-down manner to connect the various siloed apps to a centralized platform. As common netizens, the bottom-up product innovation is the only resort we can attract users. We need to boil down the problems to a specific issue we will delve into and develop solutions to improve the experience of a targeted group of users--here are my two cents: “use web technologies to achieve native app experience, but with better data interoperability and better data ownership for our users.”</p>
+        </div>
+
+    </div>
+
+    <!--Features-->
+    <div class="ui text container" id="feature">
+
+        <h1 class="ui horizontal divider header">
+            Key Product Features
+        </h1>
+
+        <div class="ui text">
+            <p>Personal Data Management - the first feature we are developing is a browser extension to help users manage their digital footprints online: to hide digital footprint on selected websites, to be self-aware on how their time is spent online. Moreover, in the remote working scenarios, users on our product can create various project profiles: in each profile there could be a slew of websites, and websites of a kind will automatically flock into a set, i.e., Web App, or mini-program--github, stackoverflow, zhihu, CNN, each set includes the affordances of the website and the historic contents viewed by users.</p>
+        </div>
+
+    </div>
+
+    <!--Team-->
+    <div class="ui text container" id="team">
+
+        <h1 class="ui horizontal divider header">
+            Our Team
+        </h1>
+
+        <div class="ui grid">
+
+            <div class="column">
+                <div class="ui fluid card">
+                    <div class="ui circular image">
+                        <img src="images/han.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="header">Han Su</div>
+                        <div class="meta">
+                            <a>Project Initiator</a>
+                        </div>
+                        <div class="description">
+                            Han Su has a deep interest in Internet products related to information and technologies dealing with data interoperability. Han has worked in Internet startups and giant companies and aims to be an entrepreneur. Han earned his master’s degree in comparative media studies from MIT.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui fluid card">
+                    <div class="ui circular image">
+                        <img src="images/ziming.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="header">Ziming Shen</div>
+                        <div class="meta">
+                            <a>Engineering Team</a>
+                        </div>
+                        <div class="description">
+                            Ziming graduated from NYU and then earned his master degree in Computer Science at Duke. After spending years in the east coast, Ziming will finally start his career as software developer in the Emerald City.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui fluid card">
+                    <div class="ui circular image">
+                        <img src="images/liyang.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="header">Liyang Zhu</div>
+                        <div class="meta">
+                            <a>Engineering Team</a>
+                        </div>
+                        <div class="description">
+                            Liyang Zhu is currently a junior at New York University in Shanghai majoring in Computer Science. He has a keen interest in various programming languages and computer networking systems. In his spare time, he likes to develop small software that make life easier.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui fluid card">
+                    <div class="ui circular image">
+                        <img src="images/junchao.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="header">Junchao Lin</div>
+                        <div class="meta">
+                            <a>UX Team</a>
+                        </div>
+                        <div class="description">
+                            Junchao Lin has a background in integrated product innovation and human-computer interaction. Lin has participated in and led multiple users research and design strategy projects in both design consulting and giant tech firms. Lin earned his master’s degree in Integrated Innovation for Products and Services from Carnegie Mellon University, and is currently a research associate at Human-Computer Interaction Institute.                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui fluid card">
+                    <div class="ui circular image">
+                        <img src="images/jackie.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="header">Jackie Hu</div>
+                        <div class="meta">
+                            <a>UX Team</a>
+                        </div>
+                        <div class="description">
+                            Jackie Hu is a product designer working in the intersection of technology, design, and art. She cares about making positive impacts and bringing delights to people’s lives by designing meaningful products. Currently, Jackie is a master’s candidate in Human-Computer Interaction at Carnegie Mellon University.
+                    </div>
+                </div>
+            </div>
 
 
+        </div>
 
+            <div class="column">
+                <div class="ui fluid card">
+                    <div class="ui circular image">
+                        <img src="images/boyu.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="header">Boyu Liu</div>
+                        <div class="meta">
+                            <a>Product and Marketing Team</a>
+                        </div>
+                        <div class="description">
+                            Boyu Liu has a background in statistics, machine learning, economics, and policy. He has extensive experience in technology startups with data science, operations, and product management. He is pursuing a dual MS degree in Computer Science and Technology Policy at MIT.
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <!--先留点空间-->
-    <div class="c-vertical-padding"></div>
+            <div class="column">
+                <div class="ui fluid card">
+                    <div class="ui circular image">
+                        <img src="images/zhenyu.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="header">Zhenyu Chen</div>
+                        <div class="meta">
+                            <a>Product and Marketing Team</a>
+                        </div>
+                        <div class="description">
+                            Zhenyu Chen has a background in business, finance and data analytics. He has experience at an Israli technology startup as a data-driven business development specialist. Graduated from NYU and then earned his master’s degree from Brandeis University, he will start his career as a risk assessment analyst in the field of finance.
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div style="height: 3000px;">
+        </div>
+
+    </div>
+
+    <!--Join-->
+    <div class="ui text container" id="join">
+
+        <h1 class="ui horizontal divider header">
+            Join Us
+        </h1>
+
+        <div class="ui text">
+            <p>If you are interested in what we are doing and would like to contribute to building the MVP this summer, please don’t hesitate to join us! Though everyone now is working voluntarily without economic incentives, the market won’t stay unwitting to the value we will be providing once our product gets launched.</p>
+            <p>This is a great opportunity for you to learn and practice your skills and build your own product with a fellow cohort. We are also looking for a small amount of funding or members can contribute a small amount to move the project forward.</p>
+            <p>We are recruiting the following roles:</p>
+
+            <div class="ui bulleted list">
+                <div class="item">
+                    <div>UI/UX Designer:</div>
+                    <div class="list">
+                        <div class="item">Gather and evaluate user requirements in collaboration with product managers and engineers.</div>
+                        <div class="item">Interested in data management design.</div>
+                        <div class="item">10h commitment/week.</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div>Full-stack Engineer:</div>
+                    <div class="list">
+                        <div class="item">Experienced in developing web applications/extensions.</div>
+                        <div class="item">Familiar with cookies.</div>
+                        <div class="item">15h commitment/week.</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div>Software Engineer:</div>
+                    <div class="list">
+                        <div class="item">With good knowledge in recommendation systems and basic web technologies.</div>
+                        <div class="item">15h commitment/week.</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div>Product Manager</div>
+                    <div class="list">
+                        <div class="item">Interested in Internet products and able to conduct research to obtain market information.</div>
+                        <div class="item">Good at defining problems faced by users through qualitative analysis.</div>
+                        <div class="item">Interested in working with UX to conduct interviews to better understand users.</div>
+                        <div class="item">10h commitment/week</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <!--页脚-->
-    <div class="ui inverted vertical segment">
-        <div class="ui container c-footer">
+    <div class="ui inverted vertical segment" id="footer">
+        <div class="ui container">
             <div class="ui equal height stackable grid">
-
-                <div class="middle aligned row">
-
-                    <div class="four wide column">
-                        <div class="ui image c-footer-logo">
-                            <img ondragstart="return false;" src="image/logo.png">
-                        </div>
-                    </div>
-
-                    <div class="eight wide column">
-                        <h4 class="ui inverted header">联系我们</h4>
-                        <div class="ui inverted link list">
-                            <a class="item" href="mailto:hackshanghai2020@gmail.com">
-                                <i class="mail icon"></i>
-                                hackshanghai2020@gmail.com
-                            </a>
-                            <a class="item">
-                                <i class="location arrow icon"></i>
-                                上海市浦东新区世纪大道1555号上海纽约大学
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="four wide column">
-                        <h4 class="ui inverted header">扫一扫，关注微信公众号</h4>
-                        <div class="ui image">
-                            <img class="c-footer-qrcode" ondragstart="return false;" src="image/wechat.jpg">
-                        </div>
-                    </div>
-
-                </div>
 
                 <div class="center aligned middle aligned row">
                     <div class="column">
-                        Copyright
-                        <i class="copyright outline icon"></i>
-                        2020 Liyang Zhu. All rights reserved.
+                        The Privoce Project - 2020
                     </div>
                 </div>
 

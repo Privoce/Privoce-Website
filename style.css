@@ -1,3 +1,7 @@
+.font-size-control {
+    font-size: 1.25rem!important;
+}
+
 /*回到顶部按钮*/
 #scroll-to-top-button {
     position: fixed;
@@ -11,7 +15,7 @@
 /*主页向下滚动动画图标*/
 div.scrolling-hint {
     position: absolute;
-    top: 750px;
+    top: 625px;
     height: 5rem;
     width: 100%;
     text-align: center;
@@ -42,27 +46,6 @@ i.scrolling-hint {
     cursor: pointer;
 }
 
-/*主菜单项目*/
-#main-menu a, #main-menu h3 {
-    color: #ffffff !important;
-    transition: background 0.5s ease, color 0.5s ease;
-}
-
-#main-menu a:hover, #main-menu h3:hover {
-    /*background: rgba(249, 249, 249, 0.31) !important;*/
-    color: #ffffff !important;
-    transition: background 0.5s ease, color 0.5s ease;
-}
-
-#main-menu.fixed a, #main-menu.fixed h3 {
-    color: #000000 !important;
-}
-
-#main-menu.fixed a:hover, #main-menu.fixed h3 {
-    background: #d1d1d1 !important;
-    color: #000000 !important;
-}
-
 /*菜单仅显示电脑版项目*/
 .menu .mobile-only {
     display: none !important;
@@ -73,83 +56,71 @@ i.scrolling-hint {
     /*padding-top: 19px !important;*/
 }
 
-/*修复菜单header*/
+/*菜单修复*/
 .main.menu .mobile-only h3 {
     padding-right: 5ch;
 }
 
 .main.menu .item {
-    line-height: 29px;
+    line-height: 30px;
 }
 
-.main.menu.fixed h3 {
-    line-height: 35px;
+.main.menu h3 {
+    font-size: 24px;
 }
 
 #sidebar-menu h3 {
     margin: 5px 0;
-    font-size: 25px;
+    font-size: 26px;
 }
 
 /*横幅巨幕*/
 #banner img {
     width: 300px;
-    margin: 60px auto 0 auto;
+    margin: 40px auto 0 auto;
+}
+
+#banner h1 {
+    margin-top: -10px;
 }
 
 #banner h2 {
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 #banner div{
     margin-top: 30px;
-    margin-bottom: 180px;
+    margin-bottom: 120px;
 }
 
-
-
-/*正文通用组件*/
-h1.ui.horizontal.divider.header {
-    margin-top: 7rem !important;
+/*正文控件*/
+.ui.horizontal.divider.header {
+    margin-top: 125px;
+    margin-bottom: 50px;
+    font-size: 30px;
 }
 
-.ui.justified.container,
-.ui.center.aligned.container {
-    margin-top: 3rem !important;
+.ui.medium.header {
+    margin-top: 25px;
+    font-size: 22px;
 }
 
-h2.ui.header {
-    margin-top: 4rem !important;
+.ui.text {
+    font-family: 'Microsoft YaHei UI', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
-.ui.styled.accordion {
-    margin-top: 1rem;
+.ui.text p {
+    margin-top: 35px;
 }
 
-.ui.stackable.grid.container .ui.statistic {
-    margin-top: 1rem;
+#team .column {
+    width: calc(100%/3);
 }
 
-.ui.statistic .label {
-    margin-top: 1rem !important;
-}
-
-/*文末留空*/
-.c-vertical-padding {
-    height: 10rem;
-}
-
-/*页脚*/
-.c-footer {
-    padding: 3rem 2rem 1rem;
-}
-
-.c-footer-logo {
-    width: 200px;
-}
-
-.c-footer-qrcode {
-    width: 150px;
+#footer {
+    margin-top: 75px;
+    padding: 25px;
 }
 
 /*手机版*/
@@ -164,23 +135,7 @@ h2.ui.header {
         padding-top: 19px !important;
     }
 
-    /*文末留空*/
-    .c-vertical-padding {
-        margin-top: 6rem;
-        height: 0;
-    }
-
-    /*页脚*/
-    .c-footer {
-        padding: 2rem 2rem 1rem;
-        text-align: center;
-    }
-
-    .c-footer-logo {
-        width: 180px;
-    }
-
-    .c-footer-qrcode {
-        width: 200px;
+    #team .column {
+        width: calc(100%/2);
     }
 }

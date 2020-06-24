@@ -1,4 +1,4 @@
-let parts = ["home", "overall", "committee", "breakdown", "sponsor", "faq", "register"];
+let parts = ["home", "mission", "overview", "approach", "feature", "team", "join"];
 let displayScrollTop = false;
 let sectionPosition = 0;
 
@@ -14,18 +14,15 @@ function calcPartPosition() {
 
 // 高亮所在区块
 function updatePartPosition(p) {
-    $("#main-menu .item").removeClass("active");
-    $("#sidebar-menu > .item").removeClass("active");
+    $(".menu .item").removeClass("active");
     if (p !== 0) {
-        $(`.n-${parts[p]}.item`).addClass("active");
+        $(`.n-${parts[p]}.item:not(.header)`).addClass("active");
     }
 }
 
 // 监听窗口滚动
 $(window).scroll(function () {
-
-    return;
-    if (document.documentElement.scrollTop + document.body.scrollTop > document.body.clientHeight) {
+    if (document.documentElement.scrollTop + document.body.scrollTop > 720) {
         // 显示顶部按钮
         if (!displayScrollTop) {
             // 还没显示，触发动画
@@ -50,14 +47,14 @@ $(window).scroll(function () {
 $(document).ready(function () {
     // 主菜单吸附
     $('.masthead').visibility({
-            once: false,
-            onBottomPassed: function () {
-                $('.fixed.menu').transition('fade in');
-            },
-            onBottomPassedReverse: function () {
-                $('.fixed.menu').transition('fade out');
-            }
-        });
+        once: false,
+        onBottomPassed: function () {
+            $('.fixed.menu').transition('fade in');
+        },
+        onBottomPassedReverse: function () {
+            $('.fixed.menu').transition('fade out');
+        }
+    });
 
     // 侧边菜单展开
     $(".ui.sidebar").sidebar("attach events", ".sidebar-toggle");
@@ -74,4 +71,7 @@ $(document).ready(function () {
 
     // 防止图片拖动
     $('img').on('dragstart', () => false);
+
+    // 下拉菜单
+    $('.ui.dropdown').dropdown();
 });
